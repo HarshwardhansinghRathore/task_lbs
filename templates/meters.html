@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All meters</title>
+</head>
+<body>
+    {% for meter in all_meters %}
+    <br>
+    <a href="{{ url_for('meter', meter_id=meter.id) }}"> {{ meter.label }} </a>
+    <br>
+    {% endfor %}
+</body>
+</html>

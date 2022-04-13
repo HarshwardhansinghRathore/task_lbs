@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meter Data</title>
+</head>
+<body>
+ <h3>DB Schema:</h3>
+ <h3>    Table: :"meters"</h3>
+ <h3>    Fields:</h3>
+ <h3>        id: {{ meter_information.id }}</h3>
+ <h3>        label: {{ meter_information.label }}</h3>
+ <h3>    Table: :"meter_data"</h3>
+ <h3>    Fields:</h3>
+ {% for meter_info in meter_information.meters_data %}
+    <h3>        "id": {{ meter_info.id }}</h3>
+    <h3>        "meter_id": {{ meter_info.meter_id }}</h3>
+    <h3>        "timestamp": {{ meter_info.timestamp }}</h3>
+    <h3>        "value": {{ meter_info.value }}</h3>
+ {% endfor %}
+</body>
+</html>
