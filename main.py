@@ -42,26 +42,6 @@ class MeterData(db.Model):
 
 db.create_all()
 
-meter = Meters(
-    label='meter x'
-)
-db.session.add(meter)
-db.session.commit()
-meter_data = MeterData(
-    timestamp=datetime.now(),
-    value=100,
-    meter_r=meter
-)
-meter_d = MeterData(
-    timestamp=datetime.now(),
-    value=1000,
-    meter_r=meter
-)
-
-db.session.add(meter_data)
-db.session.commit()
-db.session.add(meter_d)
-db.session.commit()
 
 
 @app.route('/')
